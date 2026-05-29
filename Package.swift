@@ -3,11 +3,16 @@
 
 import PackageDescription
 
-// Important: Use these settings for most targets.
-let swiftSettings: [SwiftSetting]? = [.defaultIsolation(MainActor.self)]
+// Core library types are nonisolated Sendable value types, so they must not
+// adopt MainActor default isolation. Strict concurrency comes from the v6
+// language mode declared below.
+let swiftSettings: [SwiftSetting] = []
 
 let package = Package(
     name: "StockChartsKit",
+    platforms: [
+        .macOS(.v14)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
