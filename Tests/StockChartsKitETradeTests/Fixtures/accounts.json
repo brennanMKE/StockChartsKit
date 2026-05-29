@@ -1,0 +1,25 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "AccountListResponse": {
+      "Accounts": {
+        "Account": [
+          {
+            "accountId": "11111111",
+            "accountIdKey": "REDACTED-KEY-AAA",
+            "accountName": "Individual Brokerage",
+            "accountType": "INDIVIDUAL",
+            "institutionType": "BROKERAGE"
+          },
+          {
+            "accountId": "22222222",
+            "accountIdKey": "REDACTED-KEY-BBB",
+            "accountName": "Roth IRA",
+            "accountType": "ROTH_IRA",
+            "institutionType": "BROKERAGE"
+          }
+        ]
+      }
+    }
+  }
+}

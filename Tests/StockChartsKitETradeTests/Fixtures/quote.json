@@ -1,0 +1,16 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "QuoteResponse": {
+      "QuoteData": [
+        {
+          "All": {
+            "lastTrade": 150.25,
+            "previousClose": 148.10
+          },
+          "Product": { "symbol": "AMD", "securityType": "EQ" }
+        }
+      ]
+    }
+  }
+}

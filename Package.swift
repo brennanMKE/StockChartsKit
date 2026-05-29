@@ -137,6 +137,7 @@ let package = Package(
         .testTarget(
             name: "StockChartsKitETradeTests",
             dependencies: ["StockChartsKitETrade", "StockChartsKitTesting"],
+            resources: [.copy("Fixtures")],
             swiftSettings: swiftSettings
         ),
         .testTarget(

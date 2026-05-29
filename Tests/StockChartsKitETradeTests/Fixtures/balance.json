@@ -1,0 +1,17 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "BalanceResponse": {
+      "accountId": "11111111",
+      "accountType": "INDIVIDUAL",
+      "Computed": {
+        "cashBalance": 2500.00,
+        "cashAvailableForInvestment": 2400.00,
+        "cashBuyingPower": 4800.00,
+        "RealTimeValues": {
+          "totalAccountValue": 12345.67
+        }
+      }
+    }
+  }
+}

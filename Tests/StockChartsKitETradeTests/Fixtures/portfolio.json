@@ -1,0 +1,30 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "PortfolioResponse": {
+      "AccountPortfolio": [
+        {
+          "accountId": "11111111",
+          "Position": [
+            {
+              "symbolDescription": "ADVANCED MICRO DEVICES INC",
+              "quantity": 10,
+              "pricePaid": 95.50,
+              "marketValue": 1500.00,
+              "totalGain": 545.00,
+              "Product": { "symbol": "AMD", "securityType": "EQ" }
+            },
+            {
+              "symbolDescription": "VANGUARD SP500 ETF",
+              "quantity": 4,
+              "pricePaid": 400.00,
+              "marketValue": 1720.00,
+              "totalGain": 120.00,
+              "Product": { "symbol": "VOO", "securityType": "ETF" }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
