@@ -1,0 +1,17 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "trades": [
+      {
+        "trade_id": "synthetic-1",
+        "product_id": "BTC-USD",
+        "price": "61234.56",
+        "size": "0.00100000",
+        "time": "2024-01-04T22:00:00Z",
+        "side": "BUY"
+      }
+    ],
+    "best_bid": "61234.00",
+    "best_ask": "61235.00"
+  }
+}
