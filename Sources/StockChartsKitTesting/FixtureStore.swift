@@ -58,6 +58,11 @@ public struct FixtureKey: Hashable, Sendable {
 public final class FixtureStore: @unchecked Sendable {
   private let lock = NSLock()
   private var fixtures: [FixtureKey: HTTPFixture] = [:]
+  /// Per-key FIFO queues of responses for endpoints that answer successive
+  /// calls differently (e.g. a `429` then a `200` to exercise retry).
+  private var sequences: [FixtureKey: [HTTPFixture]] = [:]
+  /// Count of served requests per key, for tests asserting retry attempts.
+  private var hitCounts: [FixtureKey: Int] = [:]
 
   /// Creates an empty store.
   public init() {}
@@ -67,6 +72,19 @@ public final class FixtureStore: @unchecked Sendable {
     lock.lock()
     defer { lock.unlock() }
     fixtures[key] = fixture
+  }
+
+  /// Registers an ordered sequence of fixtures under `key`.
+  ///
+  /// Each request matching `key` consumes the next fixture in order; once the
+  /// queue is exhausted the final fixture is returned for any further requests.
+  /// This lets a test drive a retry path such as a `429` followed by a `200`
+  /// from the same method+path. A sequence takes precedence over any single
+  /// fixture registered under the same key.
+  public func register(key: FixtureKey, sequence: [HTTPFixture]) {
+    lock.lock()
+    defer { lock.unlock() }
+    sequences[key] = sequence
   }
 
   /// Registers the fixture named `name` (without extension) from `bundle`.
@@ -104,14 +122,32 @@ public final class FixtureStore: @unchecked Sendable {
     lock.lock()
     defer { lock.unlock() }
     let key = FixtureKey(request: request)
+    hitCounts[key, default: 0] += 1
+    if var queue = sequences[key] {
+      // Dequeue the next response, keeping the last one once exhausted.
+      let next = queue.first
+      if queue.count > 1 {
+        queue.removeFirst()
+        sequences[key] = queue
+      }
+      return next
+    }
     return fixtures[key]
+  }
+
+  /// The number of requests served for `key`. Tests use this to assert how
+  /// many attempts the client actually made.
+  public func hitCount(for key: FixtureKey) -> Int {
+    lock.lock()
+    defer { lock.unlock() }
+    return hitCounts[key, default: 0]
   }
 
   /// Whether any fixtures are registered.
   var isEmpty: Bool {
     lock.lock()
     defer { lock.unlock() }
-    return fixtures.isEmpty
+    return fixtures.isEmpty && sequences.isEmpty
   }
 }
 
