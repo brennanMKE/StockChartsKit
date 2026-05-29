@@ -156,7 +156,7 @@ let package = Package(
         ),
         .testTarget(
             name: "StockChartsKitCSVTests",
-            dependencies: ["StockChartsKitCSV", "StockChartsKitTesting"],
+            dependencies: ["StockChartsKitCSV", "StockChartsKit"],
             swiftSettings: swiftSettings
         ),
     ],
