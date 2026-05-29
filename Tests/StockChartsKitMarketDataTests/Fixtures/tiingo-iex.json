@@ -1,0 +1,16 @@
+{
+  "statusCode": 200,
+  "headers": { "Content-Type": "application/json" },
+  "bodyJSON": [
+    {
+      "ticker": "AMD",
+      "timestamp": "2024-01-04T21:00:00.000Z",
+      "last": 142.25,
+      "tngoLast": 142.25,
+      "prevClose": 140.5,
+      "open": 140.6,
+      "high": 143.0,
+      "low": 140.1
+    }
+  ]
+}

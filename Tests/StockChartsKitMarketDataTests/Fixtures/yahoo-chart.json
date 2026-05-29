@@ -1,0 +1,28 @@
+{
+  "statusCode": 200,
+  "headers": { "Content-Type": "application/json" },
+  "bodyJSON": {
+    "chart": {
+      "result": [
+        {
+          "meta": {
+            "currency": "USD",
+            "symbol": "AMD",
+            "regularMarketPrice": 142.25,
+            "chartPreviousClose": 136.0,
+            "regularMarketTime": 1704326400
+          },
+          "timestamp": [1704153600, 1704240000, 1704326400],
+          "indicators": {
+            "quote": [
+              {
+                "close": [138.0, 140.5, 142.25]
+              }
+            ]
+          }
+        }
+      ],
+      "error": null
+    }
+  }
+}

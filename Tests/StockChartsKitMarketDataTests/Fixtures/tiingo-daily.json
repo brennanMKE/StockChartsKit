@@ -1,0 +1,33 @@
+{
+  "statusCode": 200,
+  "headers": { "Content-Type": "application/json" },
+  "bodyJSON": [
+    {
+      "date": "2024-01-02T00:00:00.000Z",
+      "close": 138.0,
+      "adjClose": 138.0,
+      "open": 137.5,
+      "high": 139.0,
+      "low": 136.0,
+      "volume": 1000000
+    },
+    {
+      "date": "2024-01-03T00:00:00.000Z",
+      "close": 140.5,
+      "adjClose": 140.5,
+      "open": 138.2,
+      "high": 141.0,
+      "low": 137.9,
+      "volume": 1100000
+    },
+    {
+      "date": "2024-01-04T00:00:00.000Z",
+      "close": 142.25,
+      "adjClose": 142.25,
+      "open": 140.6,
+      "high": 143.0,
+      "low": 140.1,
+      "volume": 1200000
+    }
+  ]
+}
