@@ -1,0 +1,16 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "bodyJSON": {
+    "accounts": [
+      {
+        "id": "acct-redacted-1",
+        "displayName": "Brokerage REDACTED",
+        "kind": "brokerage",
+        "baseCurrency": "USD"
+      }
+    ]
+  }
+}

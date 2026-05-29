@@ -1,5 +1,7 @@
 /// Test-support library for StockChartsKit.
 ///
-/// Real test helpers (HTTP replay, fixture loading, fake providers) land in a
-/// later issue; this is a placeholder so SPM resolves the target.
+/// Provides programmable test doubles (``MockBrokerageProvider``,
+/// ``InMemorySnapshotStore``, ``FixedMarketDataProvider``) and an offline
+/// HTTP-replay stack (``ReplayURLProtocol``, ``FixtureStore``, ``HTTPFixture``,
+/// ``Redactor``) so every provider test runs without network access.
 public enum StockChartsKitTesting {}
