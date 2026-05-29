@@ -1,0 +1,31 @@
+# Normalize line endings: store everything as LF in the repo, let Git decide
+# the working-tree form. Keeps diffs clean across machines.
+* text=auto eol=lf
+
+# Source and config — explicitly text.
+*.swift   text diff=swift
+*.md      text
+*.json    text
+*.yml     text
+*.yaml    text
+*.sql     text
+Package.swift          text
+Package.resolved       text -diff   linguist-generated
+
+# Binary / opaque — never line-ending-converted or diffed as text.
+*.sqlite  binary
+*.png     binary
+*.jpg     binary
+*.pdf     binary
+*.p8      binary
+*.p12     binary
+
+# Keep recorded HTTP fixtures from being mangled, but skip them in language
+# stats and large diffs (see PRD §12 — JSON response replays).
+Tests/**/Fixtures/**   linguist-generated -diff
+
+# Don't ship repo cruft inside `git archive` tarballs.
+.gitignore        export-ignore
+.gitattributes    export-ignore
+.swiftpm/         export-ignore
+PRD.md            export-ignore
