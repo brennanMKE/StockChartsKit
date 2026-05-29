@@ -1,0 +1,13 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "bodyJSON": {
+    "data": {
+      "amount": "65000.00",
+      "base": "BTC",
+      "currency": "USD"
+    }
+  }
+}
