@@ -154,6 +154,7 @@ let package = Package(
         .testTarget(
             name: "StockChartsKitSchwabTests",
             dependencies: ["StockChartsKitSchwab", "StockChartsKitTesting"],
+            resources: [.copy("Fixtures")],
             swiftSettings: swiftSettings
         ),
         .testTarget(

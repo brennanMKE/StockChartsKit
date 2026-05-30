@@ -1,0 +1,13 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "AMD": {
+      "symbol": "AMD",
+      "quote": {
+        "lastPrice": "128.45",
+        "closePrice": "125.10",
+        "quoteTime": 1704405600000
+      }
+    }
+  }
+}

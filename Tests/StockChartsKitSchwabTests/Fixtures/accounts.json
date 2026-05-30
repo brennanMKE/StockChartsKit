@@ -1,0 +1,32 @@
+{
+  "statusCode": 200,
+  "bodyJSON": [
+    {
+      "securitiesAccount": {
+        "type": "MARGIN",
+        "accountNumber": "00099991",
+        "isDayTrader": false,
+        "currentBalances": {
+          "liquidationValue": "125000.50",
+          "cashBalance": "5000.25",
+          "totalCash": "5000.25",
+          "availableFunds": "4800.00",
+          "buyingPower": "9600.00"
+        }
+      }
+    },
+    {
+      "securitiesAccount": {
+        "type": "CASH",
+        "accountNumber": "00099992",
+        "isDayTrader": false,
+        "currentBalances": {
+          "liquidationValue": "8200.00",
+          "cashBalance": "8200.00",
+          "totalCash": "8200.00",
+          "availableFunds": "8200.00"
+        }
+      }
+    }
+  ]
+}

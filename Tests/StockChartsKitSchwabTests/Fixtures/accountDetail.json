@@ -1,0 +1,41 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "securitiesAccount": {
+      "type": "MARGIN",
+      "accountNumber": "00099991",
+      "isDayTrader": false,
+      "positions": [
+        {
+          "instrument": {
+            "symbol": "AMD",
+            "assetType": "EQUITY"
+          },
+          "longQuantity": "100",
+          "shortQuantity": "0",
+          "averagePrice": "95.40",
+          "marketValue": "12500.00",
+          "longOpenProfitLoss": "2960.00"
+        },
+        {
+          "instrument": {
+            "symbol": "VOO",
+            "assetType": "ETF"
+          },
+          "longQuantity": "12.5",
+          "shortQuantity": "0",
+          "averagePrice": "410.10",
+          "marketValue": "5375.50",
+          "longOpenProfitLoss": "249.25"
+        }
+      ],
+      "currentBalances": {
+        "liquidationValue": "125000.50",
+        "cashBalance": "5000.25",
+        "totalCash": "5000.25",
+        "availableFunds": "4800.00",
+        "buyingPower": "9600.00"
+      }
+    }
+  }
+}

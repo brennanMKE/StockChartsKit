@@ -1,0 +1,10 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "access_token": "REDACTED-SYNTHETIC-REFRESHED-ACCESS-TOKEN",
+    "refresh_token": "REDACTED-SYNTHETIC-REFRESH-TOKEN",
+    "expires_in": 1800,
+    "token_type": "Bearer",
+    "scope": "readonly"
+  }
+}

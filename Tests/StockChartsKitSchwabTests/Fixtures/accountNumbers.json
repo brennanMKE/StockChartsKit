@@ -1,0 +1,13 @@
+{
+  "statusCode": 200,
+  "bodyJSON": [
+    {
+      "accountNumber": "00099991",
+      "hashValue": "REDACTEDHASH0001"
+    },
+    {
+      "accountNumber": "00099992",
+      "hashValue": "REDACTEDHASH0002"
+    }
+  ]
+}
