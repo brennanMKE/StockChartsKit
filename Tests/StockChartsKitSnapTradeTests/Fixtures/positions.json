@@ -1,0 +1,36 @@
+{
+  "statusCode": 200,
+  "bodyJSON": [
+    {
+      "symbol": {
+        "symbol": {
+          "symbol": "AMD",
+          "type": { "code": "cs" },
+          "currency": { "code": "USD" }
+        }
+      },
+      "units": "10",
+      "price": "150.25",
+      "average_purchase_price": "120.00",
+      "open_pnl": "302.50"
+    },
+    {
+      "symbol": {
+        "symbol": {
+          "symbol": "VTI",
+          "type": { "code": "et" },
+          "currency": { "code": "USD" }
+        }
+      },
+      "units": "5.5",
+      "price": "240.00",
+      "average_purchase_price": "200.00",
+      "open_pnl": "220.00"
+    },
+    {
+      "symbol": null,
+      "units": "0",
+      "price": "0"
+    }
+  ]
+}

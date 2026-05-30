@@ -1,0 +1,6 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "redirectURI": "https://app.snaptrade.com/connect?token=SYNTHETIC-CONNECT-TOKEN"
+  }
+}

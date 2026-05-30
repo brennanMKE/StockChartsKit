@@ -1,0 +1,10 @@
+{
+  "statusCode": 200,
+  "bodyJSON": [
+    {
+      "currency": { "code": "USD" },
+      "cash": "1234.56",
+      "buying_power": "2469.12"
+    }
+  ]
+}

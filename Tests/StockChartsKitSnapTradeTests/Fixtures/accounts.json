@@ -1,0 +1,35 @@
+{
+  "statusCode": 200,
+  "bodyJSON": [
+    {
+      "id": "acct-rh-0001",
+      "name": "Robinhood Individual",
+      "number": "RH1234",
+      "currency": { "code": "USD" },
+      "brokerage_authorization": {
+        "id": "auth-robinhood",
+        "brokerage": { "name": "Robinhood" }
+      }
+    },
+    {
+      "id": "acct-fid-0001",
+      "name": "Fidelity Brokerage",
+      "number": "FID5678",
+      "currency": { "code": "USD" },
+      "brokerage_authorization": {
+        "id": "auth-fidelity",
+        "brokerage": { "name": "Fidelity" }
+      }
+    },
+    {
+      "id": "acct-fid-0002",
+      "name": "Fidelity NetBenefits 401k",
+      "number": "FID9012",
+      "currency": { "code": "USD" },
+      "brokerage_authorization": {
+        "id": "auth-fidelity",
+        "brokerage": { "name": "Fidelity" }
+      }
+    }
+  ]
+}

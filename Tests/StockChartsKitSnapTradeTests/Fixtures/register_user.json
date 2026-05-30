@@ -1,0 +1,7 @@
+{
+  "statusCode": 200,
+  "bodyJSON": {
+    "userId": "synthetic-user-id",
+    "userSecret": "REDACTED-SYNTHETIC-USER-SECRET"
+  }
+}

@@ -149,6 +149,7 @@ let package = Package(
         .testTarget(
             name: "StockChartsKitSnapTradeTests",
             dependencies: ["StockChartsKitSnapTrade", "StockChartsKitTesting"],
+            resources: [.copy("Fixtures")],
             swiftSettings: swiftSettings
         ),
         .testTarget(
